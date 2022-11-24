@@ -1,7 +1,7 @@
 import os
 from tkinter import *
 def show_values(val):
-	os.system('xrandr --output eDP --brightness ' + str(int(w1.get())/100))
+	os.system('xrandr --output eDP --brightness ' + str(int(w1.get())/100)) # run xrandr command first to get all your display outputs,change the "eDP" and "HDMI-A-0" accordingly
 	os.system('xrandr --output HDMI-A-0 --brightness ' + str(int(w2.get())/100))
 
 master = Tk()
@@ -18,6 +18,4 @@ w2.pack()
 
 
 mainloop()
-
-## a thing to control the brightness of an external monitor
-## "hdmi-a-0" and "eDP" varies by device
+## a small script to control the brightness of an external monitor
